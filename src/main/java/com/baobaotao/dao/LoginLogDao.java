@@ -13,7 +13,7 @@ public class LoginLogDao {
 
 	public void insertLoginLog(LoginLog loginLog) {
 		String sql="INSERT INTO t_login_log(user_id,ip,login_datetime) "
-				+" VALUES (?,?,?,?)";
+				+" VALUES (?,?,?)";
 		Object[] args = {loginLog.getUserId(),loginLog.getIp(),loginLog.getLoginDate()};
 		jdbcTemplate.update(sql, args);
 	}
